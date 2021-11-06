@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import RobotsList from './components/RobotsList';
 
 function App() {
   return (
     <div className="App">
-      <p> The robots will come in here. </p>
+      <h1> Robots </h1>
+      <RobotsList />
     </div>
   );
 }
