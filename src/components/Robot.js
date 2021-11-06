@@ -1,12 +1,13 @@
+import "./Robot.css";
 const Robot = (robot) => {
   return (
     <section className="card__robot">
-      <h2> {robot.name} </h2>
-      <img src="https://media.istockphoto.com/photos/-picture-id500962582?s=612x612" alt={robot.name}/>
+      <h4> {robot.robot.name} </h4>
+      <img src={robot.robot.image} alt={robot.robot.name} width="200" height="230"/>
       <ul className="card__features">
-        <li> Speed: {robot.features.speed} </li>
-        <li> Strength: {robot.features.strength} </li>
-        <li> Creation Date: {robot.features.creationDate} </li>
+        <li> Speed: {robot.robot.features.speed} </li>
+        <li> Strength: {robot.robot.features.strength} </li>
+        <li> Creation Date: {robot.robot.features.creationDate} </li>
       </ul>
     </section>
   )
