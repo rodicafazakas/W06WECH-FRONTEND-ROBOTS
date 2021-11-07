@@ -5,12 +5,14 @@
   margin: 10px;
   padding: 5px;
   list-style: none;
+  position: relative;
 }
 
 .card__features {
   list-style: none;
   text-align: left;
   color: whitesmoke;
+  margin-top: 10px;
 }
 
 h4 {
@@ -19,4 +21,18 @@ h4 {
 
 img {
   border-radius: 20px;
+}
+
+.card__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__delete {
+  background-color: indianred;
+  border-radius: 5px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
