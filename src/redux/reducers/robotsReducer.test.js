@@ -27,7 +27,7 @@ describe("Given a robotsReducer", () => {
           }
         ];
     const action = {
-      type: actionTypes.loadRobot,
+      type: actionTypes.loadRobots,
       robots: robotsList,
     }
 

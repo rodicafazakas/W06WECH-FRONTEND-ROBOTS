@@ -1,7 +1,22 @@
 .card__robot {
   margin: 10px;
+  border-radius: 20px;
+  background-color: green;
+  margin: 10px;
+  padding: 5px;
+  list-style: none;
 }
 
 .card__features {
   list-style: none;
+  text-align: left;
+  color: whitesmoke;
+}
+
+h4 {
+  color: whitesmoke;
+}
+
+img {
+  border-radius: 20px;
 }

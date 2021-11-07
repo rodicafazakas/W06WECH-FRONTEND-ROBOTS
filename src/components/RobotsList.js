@@ -12,12 +12,14 @@ const RobotsList = () => {
   }, [loadRobots]) 
 
   return (
-    <ul className = "cards-list">
-      {robots && robots.length ?
-        robots.map( (robot) => <Robot key={robot._id} robot={robot} />) 
-          : "There is no data available from the Heroku API"  
-      }
-    </ul>
+    <div className="robots-list">
+      <ul className = "cards-list">
+        {robots && robots.length ?
+          robots.map( (robot) => <Robot key={robot._id} robot={robot} />) 
+            : "There is no data available from the Heroku API"  
+        }
+      </ul>
+    </div>
   )
 };
 
