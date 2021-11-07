@@ -1,0 +1,18 @@
+.create__robot {
+  margin: 10px;
+  width: 270px;
+  border-radius: 20px;
+  background-color: green;
+  margin: 10px;
+  padding: 5px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
