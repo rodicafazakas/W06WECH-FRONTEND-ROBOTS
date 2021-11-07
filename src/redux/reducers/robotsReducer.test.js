@@ -13,7 +13,7 @@ describe("Given a robotsReducer", () => {
             features: {
               speed: 4,
               strength: 9,
-              creationDate: 1977,
+              creation_date: 1977,
             }
           },
           { id: 2,
@@ -22,7 +22,7 @@ describe("Given a robotsReducer", () => {
             features: {
               speed: 10,
               strength: 9,
-              creationDate: 2015,
+              creation_date: 2015,
             }
           }
         ];
