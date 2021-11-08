@@ -32,3 +32,8 @@ export const deleteRobotThunk = (id) => {
     }
   }
 };
+
+
+// const token = Json.parse(localStorage.getItem("pablo"));
+//const {data: token} =  
+// headers: {"Authorization": "Bearer" + token}
