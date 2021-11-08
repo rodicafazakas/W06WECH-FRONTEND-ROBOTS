@@ -19,3 +19,12 @@ export const deleteRobotAction = (id) => ({
   type: actionTypes.deleteRobot,
   id,
 })
+
+export const userLoginAction = (user) => ({
+  type: actionTypes.loginUser,
+  user,
+})
+
+export const userLogoutAction = () => ({
+  type: actionTypes.logoutUser
+})

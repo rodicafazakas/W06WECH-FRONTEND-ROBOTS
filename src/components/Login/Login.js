@@ -1,26 +1,31 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {useUser} from "../../hooks/useUser";
 
 const LoginForm = () => {
 
-  // const [userData, setUserData] = useState();
-  // // const navigate = useNavigate();
+  const [userData, setUserData] = useState();
+  const navigate = useNavigate();
 
-  // const changeUserData = (event)=> {
-  //   setUserData(
-  //     ...userData,
-  //     [event.target.id]: event.target.value
-  //   )
-  // }
+  const {loginUser} = useUser();
 
-  // const onSubmit = (event) => {
-  //   event.preventDefault();
-  //   dispatch(loginUserThunk(userData)); // cuando no utilizamos custom hook
-  //   // navigate("/list");
-  // }
+  const changeUserData = (event)=> {
+    setUserData(
+      ...userData,
+      [event.target.id]: event.target.value
+    )
+  }
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    loginUser(userData);
+    //dispatch(loginUserThunk(userData)); // cuando no utilizamos custom hook
+    navigate("/robots");
+  }
 
   return (
     <>
-      <form  autoComplete="off" noValidate>
+      <form onSubmit={onSubmit} autoComplete="off" noValidate>
         <input type="text" id="name" placeholder="Enter name"/>
         <input type="text" id="username" placehoolder="Enter username" />
         <input type="password" id="password" placeholder="Enter password" />

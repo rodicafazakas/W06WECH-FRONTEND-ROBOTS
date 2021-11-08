@@ -4,22 +4,26 @@ const userReducer = (user={
   isAuthenticated: false,
   user:{}
 }, action) => {
-   let newReducer;
 
+  let newUser;
 
-   switch (action.type):
+  switch (action.type) {
     case actionTypes.loginUser:
-      user = {
-        isAuteticated: true,
+      newUser = {
+        isAuthenticated: true,
         user: action.user
       };
     break;
     case actionTypes.logoutUser:
       newUser = {
-        isAutheticated: false,
+        isAuthenticated: false,
         user: {}
       }
     break;
-      
-   return newReducer;
-}
+    default:
+  }
+
+   return newUser;
+};
+
+export default userReducer;
