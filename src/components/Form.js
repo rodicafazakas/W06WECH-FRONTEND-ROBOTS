@@ -47,7 +47,6 @@ const Form = () => {
         <div className="form-control">
         <input type="text" 
               id="name"
-              //  value={robotData.name} 
                placeholder="Enter name" 
                onChange={changeData} /> 
         </div>
@@ -55,7 +54,6 @@ const Form = () => {
         <div className="form-control">
         <input type="text" 
               id="image"
-              //  value={robotData.image} 
                placeholder="Image url" 
                onChange={changeData} />
         </div>
@@ -63,7 +61,6 @@ const Form = () => {
         <div className="form-control">
         <input type="text" 
               id="speed"
-              //  value={robotData.features.speed} 
                placeholder="Enter speed" 
                onChange={changeData} 
                min="0"
@@ -73,7 +70,6 @@ const Form = () => {
         <div className="form-control">  
         <input type="text" 
               id="strength"
-              //  value={robotData.features.strength} 
                placeholder="Enter strength" 
                onChange={changeData} 
                min="0"
@@ -83,7 +79,6 @@ const Form = () => {
         <div className="form-control">
         <input type="date" 
               id="creation_date"
-              //  value={robotData.features.creation_date} 
                placeholder="Enter creation date" 
                onChange={changeData} />  
         </div>
