@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
-import {useUser} from "../../hooks/useUser";
+import useUser from "../../hooks/useUser";
 
 const LoginForm = () => {
 
@@ -10,10 +10,10 @@ const LoginForm = () => {
   const {loginUser} = useUser();
 
   const changeUserData = (event)=> {
-    setUserData(
+    setUserData({
       ...userData,
       [event.target.id]: event.target.value
-    )
+    })
   }
 
   const onSubmit = (event) => {
@@ -26,9 +26,10 @@ const LoginForm = () => {
   return (
     <>
       <form onSubmit={onSubmit} autoComplete="off" noValidate>
-        <input type="text" id="name" placeholder="Enter name"/>
-        <input type="text" id="username" placehoolder="Enter username" />
-        <input type="password" id="password" placeholder="Enter password" />
+        {/* <input type="text" id="name" placeholder="Enter name"/> */}
+        <input type="text" id="username" placehoolder="Enter username" onChange={changeUserData}/>
+        <input type="password" id="password" placeholder="Enter password" onChange={changeUserData} />
+        <button type="submit"> SUBMIT </button>
       </form>
     </>
     
