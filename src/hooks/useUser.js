@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUserThunk } from "../redux/thunks/userThunk";
-import {logoutUserAction} from "../redux/actions/actionCreators";
+import {userLogoutAction} from "../redux/actions/actionCreators";
 
 const useUser = () => {
 
@@ -14,7 +14,7 @@ const useUser = () => {
   );
 
   const logoutUser = useCallback( () => {
-    dispatch(logoutUserAction());
+    dispatch(userLogoutAction());
   }, [dispatch]
   );
 
