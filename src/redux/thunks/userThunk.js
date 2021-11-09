@@ -12,13 +12,14 @@ export const loginUserThunk = (user) => async(dispatch) => {
         "Content-Type": "application/json",
       },
     });
- 
+    result = await response.json();
 
   if (response.status===200) {
-    result = await response.json();
     const token = result.token;
+    console.log(token);
     const user = jwtDecode(token);
+    console.log(user);
     dispatch(userLoginAction(user));
-    localStorage.setItem(user.username, JSON.stringify({token:token}));
+    localStorage.setItem(process.env.REACT_APP_LOCAL_STORAGE, JSON.stringify({token:token}));
   }
 };
