@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUserThunk } from "../redux/thunks/userThunk";
-import {userLogoutAction} from "../redux/actions/actionCreators";
+import { userLogoutAction } from "../redux/actions/actionCreators";
 
 const useUser = () => {
 

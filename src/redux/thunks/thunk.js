@@ -4,10 +4,13 @@ import { loadRobotsAction, createRobotAction, deleteRobotAction} from "../action
 const apiUrl="https://robots-app.herokuapp.com/robots";
 const token = "h29D8b23Llm45";
 
-// const apiUrl = "http://localhost:4050/robots"
-
 export const loadRobotsThunk = () => async (dispatch) => {
-  const response = await fetch(apiUrl);
+  const {token} = JSON.parse(localStorage.getItem("tokenizer"));
+
+  const response = await fetch(apiUrl, {
+    headers: {"Authorization": "Bearer "+token} 
+  });
+
   const robots = await response.json();
   dispatch(loadRobotsAction(robots)); 
 }
